@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="contato.css">
+</head>
+<body>
+
+    <header>
+        <nav class="barra-de-cima">
+            <ul class="lista-menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="trabalhos.html">Trabalhos</a></li>
+                <li><a href="loja.html">Loja</a></li>
+                <li><a href="croquis.html">Croquis</a></li>
+                <li><a href="contato.html" class="pagina-atual">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="meio-da-tela">
+        <section class="cartao-branco">
+            <h1 class="titulo-do-cartao">Receba notificações</h1>
+            
+            <form class="formulario-email" onsubmit="cliqueEnviar(event)">
+                <div class="caixa-de-entrada">
+                    <label for="campo-email">E-mail</label>
+                    <input type="email" id="campo-email" required>
+                </div>
+                
+                <button type="submit" class="botao-enviar">Enviar</button>
+            </form>
+
+            <hr class="linha-divisoria">
+
+            <div class="info-pessoal">
+                <h3>ENTRE EM CONTATO:</h3>
+                <p>Instagram: <strong>@ohemesx</strong></p>
+                <p>E-mail: <strong>hemersondaniel987@gmail.com</strong></p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function cliqueEnviar(evento) {
+            evento.preventDefault(); 
+            alert("E-mail enviado, entraremos em contato em breve.");
+            document.getElementById('campo-email').value = ""; 
+        }
+    </script>
+
+</body>
+</html>

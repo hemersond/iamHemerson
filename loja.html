@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja</title>
+    <link rel="stylesheet" href="loja.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="trabalhos.html">Trabalhos</a></li>
+                <li><a href="loja.html" class="active">Loja</a></li>
+                <li><a href="croquis.html">Croquis</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container-main">
+        <h1 class="main-title">Loja</h1>
+        <p class="subtitle">Coleções disponíveis</p>
+
+        <section class="gallery-wrapper">
+            <div class="gallery-container">
+                <div class="gallery-item" onclick="abrirModal('modal-1')">
+                    <img src="./imagens/roupa1.jpg" class="img-default">
+                    <img src="./imagens/roupa1.2.jpg" class="img-hover">
+                </div>
+                <div class="gallery-item" onclick="abrirModal('modal-2')">
+                    <img src="./imagens/roupa2.jpg" class="img-default">
+                    <img src="./imagens/roupa2.2.jpg" class="img-hover">
+                </div>
+                <div class="gallery-item" onclick="abrirModal('modal-3')">
+                    <img src="./imagens/roupa3.jpg" class="img-default">
+                    <img src="./imagens/roupa3.2.jpg" class="img-hover">
+                </div>
+                <div class="gallery-item" onclick="abrirModal('modal-4')">
+                    <img src="./imagens/roupa4.jpg" class="img-default">
+                    <img src="./imagens/roupa4.2.jpg" class="img-hover">
+                </div>
+                <div class="gallery-item" onclick="abrirModal('modal-5')">
+                    <img src="./imagens/roupa5.jpg" class="img-default">
+                    <img src="./imagens/roupa5.2.jpg" class="img-hover">
+                </div>
+            </div>
+        </section>
+
+        <section class="bottom-section">
+            <div class="cart-box">
+                <h2 class="cart-title">Carrinho</h2>
+                <div id="itens-carrinho">
+                    <p id="carrinho-vazio">Seu carrinho está vazio.</p>
+                </div>
+                <div style="text-align: center; margin-top: 20px;">
+                    <button class="btn-compre-carrinho" onclick="finalizarCarrinho()">Finalizar Compra</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal-overlay" id="modal-1">
+        <div class="modal-content">
+            <span class="btn-voltar" onclick="fecharModal('modal-1')">Voltar >></span>
+            <div class="modal-body">
+                <div class="modal-image"><img src="./imagens/roupa1.jpg"></div>
+                <div class="modal-info">
+                    <h2 class="modal-title">Silver Springs</h2>
+                    <p>Alta costura com pérolas.</p>
+                    <button class="btn-compre" onclick="direto1()">Compre agora R$7000</button>
+                    <button class="btn-adicionar" onclick="add1()">Adicionar ao carrinho</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-2">
+        <div class="modal-content">
+            <span class="btn-voltar" onclick="fecharModal('modal-2')">Voltar >></span>
+            <div class="modal-body">
+                <div class="modal-image"><img src="./imagens/roupa2.jpg"></div>
+                <div class="modal-info">
+                    <h2 class="modal-title">Art Attack</h2>
+                    <p>Elegância em tons de carmesim.</p>
+                    <button class="btn-compre" onclick="direto2()">Compre agora R$5000</button>
+                    <button class="btn-adicionar" onclick="add2()">Adicionar ao carrinho</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-3">
+        <div class="modal-content">
+            <span class="btn-voltar" onclick="fecharModal('modal-3')">Voltar >></span>
+            <div class="modal-body">
+                <div class="modal-image"><img src="./imagens/roupa3.jpg"></div>
+                <div class="modal-info">
+                    <h2 class="modal-title">Bubble Pink</h2>
+                    <p>Tons de rosa pastéis.</p>
+                    <button class="btn-compre" onclick="direto3()">Compre agora R$6200</button>
+                    <button class="btn-adicionar" onclick="add3()">Adicionar ao carrinho</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-4">
+        <div class="modal-content">
+            <span class="btn-voltar" onclick="fecharModal('modal-4')">Voltar >></span>
+            <div class="modal-body">
+                <div class="modal-image"><img src="./imagens/roupa4.jpg"></div>
+                <div class="modal-info">
+                    <h2 class="modal-title">Cidade Esmeralda</h2>
+                    <p>Suavidade e conforto.</p>
+                    <button class="btn-compre" onclick="direto4()">Compre agora R$4800</button>
+                    <button class="btn-adicionar" onclick="add4()">Adicionar ao carrinho</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-5">
+        <div class="modal-content">
+            <span class="btn-voltar" onclick="fecharModal('modal-5')">Voltar >></span>
+            <div class="modal-body">
+                <div class="modal-image"><img src="./imagens/roupa5.jpg"></div>
+                <div class="modal-info">
+                    <h2 class="modal-title">Sailor Moon</h2>
+                    <p>O ápice do luxo.</p>
+                    <button class="btn-compre" onclick="direto5()">Compre agora R$9000</button>
+                    <button class="btn-adicionar" onclick="add5()">Adicionar ao carrinho</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="loja.js"></script>
+</body>
+</html>
