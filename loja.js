@@ -10,12 +10,13 @@ function fecharModal(id) {
 }
 
 function direto1() {
-    var carrao = confirm("Comprar Silver Springs por R$7000?");
-    if (carrao == true) {
+    var compra_na_hora = confirm("Comprar Silver Springs por R$7000?");
+    if (compra_na_hora == true) {
         alert("Comprado!");
         location.reload();
     }
 }
+
 function add1() {
     total = total + 7000;
     lista = lista + " Silver Springs - R$7000 ";
@@ -24,8 +25,8 @@ function add1() {
 }
 
 function direto2() {
-    var carrao = confirm("Comprar Art Attack por R$5000?");
-    if (carrao == true) {
+    var compra_na_hora = confirm("Comprar Art Attack por R$5000?");
+    if (compra_na_hora == true) {
         alert("Comprado!");
         location.reload();
     }
@@ -38,8 +39,8 @@ function add2() {
 }
 
 function direto3() {
-    var carrao = confirm("Comprar Bubble Pink por R$6200?");
-    if (carrao == true) {
+    var compra_na_hora = confirm("Comprar Bubble Pink por R$6200?");
+    if (compra_na_hora == true) {
         alert("Comprado!");
         location.reload();
     }
@@ -52,8 +53,8 @@ function add3() {
 }
 
 function direto4() {
-    var carrao = confirm("Comprar Cidade Esmeralda por R$4800?");
-    if (carrao == true) {
+    var compra_na_hora = confirm("Comprar Cidade Esmeralda por R$4800?");
+    if (compra_na_hora == true) {
         alert("Comprado!");
         location.reload();
     }
@@ -67,8 +68,8 @@ function add4() {
 
 
 function direto5() {
-    var carrao = confirm("Comprar Sailor Moon por R$9000?");
-    if (carrao == true) {
+    var compra_na_hora = confirm("Comprar Sailor Moon por R$9000?");
+    if (compra_na_hora == true) {
         alert("Comprado!");
         location.reload();
     }
@@ -81,23 +82,19 @@ function add5() {
 }
 
 function finalizarCarrinho() {
-    if (total == 0) {
-        alert("Nao tem nada aqui!");
-    } else {
-        var frete = 500;
-        var tudo = total + frete;
-        var pergunta = confirm("Total com frete deu R$" + tudo + ". Aceita?");
+    var pergunta = confirm("Total da sua compra: " + total + ". Deseja comprar a roupa?");
+    
+    if (pergunta == true) {
+        var pag = prompt("1 para Cartao ou 2 para Pix");
         
-        if (pergunta == true) {
-            var pag = prompt("1 para Cartao ou 2 para Pix");
-            if (pag == "1") {
-                alert("Pago no cartao!");
-                location.reload();
-            }
-            if (pag == "2") {
-                alert("Pago no Pix!");
-                location.reload();
-            }
+        if (pag == "1") {
+            alert("Pago no cartao!");
+            location.reload();
+        }
+        
+        if (pag == "2") {
+            alert("Pago no Pix!");
+            location.reload();
         }
     }
 }

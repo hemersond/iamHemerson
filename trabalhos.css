@@ -8,15 +8,11 @@ body {
     background-color: #c5a397;
     font-family: sans-serif;
     color: #000;
-    min-height: 100vh;
-    overflow-x: hidden;
 }
 
+
 header {
-    position: absolute;
-    top: 0;
     width: 100%;
-    z-index: 10;
     padding: 20px 0;
 }
 
@@ -24,97 +20,64 @@ header {
     display: flex;
     justify-content: center;
     list-style: none;
-    gap: 15px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
 .lista-menu a {
     text-decoration: none;
-    color: white;
+    color: #000;
     font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
 .pagina-atual {
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid #000;
 }
 
-.mockup-fundo {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    z-index: -1;
-    opacity: 0;
-    transition: 2s ease-in-out;
-    transform: scale(1.1);
-}
 
-.caixa-conteudo {
+.area-trabalhos {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    gap: 30px;
-    padding: 100px 5% 40px;
+    gap: 40px;
+    padding: 40px 8%;
 }
 
-.lado-texto, .lado-foto {
-    opacity: 0;
-    transition: 1.2s ease;
+
+.bloco-texto {
+    max-width: 520px;
 }
 
-.lado-texto { 
-    transform: translateX(-40px); 
-    flex: 0 1 500px; 
+.bloco-texto h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
 }
 
-.lado-foto { 
-    transform: translateX(40px); 
+.bloco-texto p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
 
-.titulo { 
-    font-size: 4rem; 
-    margin-bottom: 10px; 
+
+.bloco-imagem img {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
 }
 
-.texto { 
-    font-size: 1rem; 
-    line-height: 1.6; 
-    text-align: justify; 
-}
 
-.foto-camera { 
-    width: 100%; 
-    max-width: 400px; 
-    display: block; 
-}
-
-.mostrar {
-    opacity: 1 !important;
-    transform: translate(0, 0) scale(1) !important;
-}
-
-@media (max-width: 850px) {
-    body {
-        overflow-y: auto;
-    }
-    .caixa-conteudo {
-        flex-direction: column-reverse;
+@media (max-width: 900px) {
+    .area-trabalhos {
+        flex-direction: column;
         text-align: center;
-        padding-top: 120px;
-        height: auto;
     }
-    .titulo { 
-        font-size: 2.5rem; 
+
+    .bloco-texto {
+        max-width: 100%;
     }
-    .texto { 
-        text-align: center; 
-    }
-    .foto-camera { 
-        max-width: 250px; 
-        margin: 0 auto; 
+
+    .bloco-imagem img {
+        max-width: 260px;
     }
 }
